@@ -1,8 +1,26 @@
-%% Start script
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+% Numerical solution to inviscid Burgers equation: du/dt + u du/dx = 0
+%
+% Time-discretization: fourth order Runge-Kutta scheme
+% Space-discretization: second order TVD-scheme with MC-limiter (Godunov
+% for points near boundaries)
+%
+% Limiters possible: 
+% @mc - MC-limiter
+% @vanalbada - Van Albada limiter
+% @minmod - MinMod limiter
+% @superbee - SuperBee limiter
+% @vanleer - Van Leer limiter
+%
+% Script by Sebastiaan ten Pas and Martin Goossens
+% 23-9-2014 | University of Twente
+%
+% For more information: info@sebastiaantenpas.nl
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-clear all;
-close all;
-clc;
+clear all; close all; clc;
 format long e;
 
 %% Constants
