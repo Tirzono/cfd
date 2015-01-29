@@ -80,7 +80,7 @@ sqrt((gamma-1)*(((sqrt (rhoL) * HL + sqrt (rhoR) * HR) / (sqrt(rhoL)+sqrt(rhoR))
 %% Make a new folder to save the data to
 
 tp = mfilename('fullpath'); %Look up the path
-dir = {tp(1:(end-13))};      %Strip the name of the script from the path
+dir = {tp(1:(end-3))};      %Strip the name of the script from the path
 tclock = fix(clock);        %Get the current date and time
 nmap = strcat(date, '-', num2str(tclock(4)), num2str(tclock(5)),num2str(tclock(6))); %Name of the new map
 path = strcat(dir{1}, 'data-files/'); %Path of the new map
