@@ -1,6 +1,10 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %
-% Exact solution to the Euler equation
+% Exact solution to Sod Shock Tube problem
+%
+% Boundary conditions:
+% pL = 1, rhoL = 1, uL = 0
+% pR = 0.125, rhoR = 0.1, uR = 0
 %
 % Script by Sebastiaan ten Pas and Martin Goossens
 % 29-1-2015 | University of Twente
@@ -9,7 +13,7 @@
 %
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-function [x1, x2, x3, x4, rho, u, p] = exactEuler(rhoL, uL, pL, rhoR, uR, pR, gamma, x, x0, t)
+function [x1, x2, x3, x4, rho, u, p] = exactSOD(rhoL, uL, pL, rhoR, uR, pR, gamma, x, x0, t)
    
 aL = sqrt(gamma * pL / rhoL); % The speed of sound at region L
 aR = sqrt(gamma * pR / rhoR); % The speed of sound at region R
